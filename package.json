@@ -1,8 +1,10 @@
 {
   "name": "gym_exercises",
   "version": "0.1.0",
-  "homepage": "https://michaelatimore.github.io/gym_exercises_primary/",
+  "homepage": "https://michaelatimore.github.io/React-Exercise-App-working-branch/",
   "private": true,
+ 
+
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -14,7 +16,8 @@
     "react-loader-spinner": "^6.0.0-0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1"
-  },
+
+},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -22,6 +25,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   },
   "eslintConfig": {
     "extends": [
