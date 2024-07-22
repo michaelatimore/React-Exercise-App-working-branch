@@ -1,5 +1,6 @@
 {
   "editor.suggest.preview": true,
   "files.autoSave": "afterDelay",
-  "window.zoomLevel": 3
+  "window.zoomLevel": 3,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
