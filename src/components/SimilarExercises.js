@@ -1,24 +1,65 @@
-import React from 'react';
-import { Typography, Box, Stack } from '@mui/material';
+import React from "react";
+import { Typography, Box, Stack } from "@mui/material";
 
-import HorizontalScrollbar from './HorizontalScrollbar';
-import Loader from './Loader';
+import HorizontalScrollbar from "./HorizontalScrollbar";
+import Loader from "./Loader";
 
+/**
+ * The SimilarExercises component renders a list of exercises that target the same muscle group as the currently
+ * viewed exercise and a list of exercises that use the same equipment as the currently viewed exercise.
+ *
+ * @param {Object} props - The component props.
+ * @param {Array} props.targetMuscleExercises - An array of exercises that target the same muscle group as the
+ * currently viewed exercise.
+ * @param {Array} props.equipmentExercises - An array of exercises that use the same equipment as the currently viewed
+ * exercise.
+ * @returns {React.ReactElement} The SimilarExercises component.
+ */
 const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => (
-    <Box sx={{ mt: { lg: '100px', xs: '0px' } }}>
-        <Typography sx={{ fontSize: { lg: '44px', xs: '25px' }, ml: '20px' }} fontWeight={700} color="#FF2625" mb="33px">
-        Exercises <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>That Target</span> The Same Muscle Group
-        </Typography>
-        <Stack direction="row" sx={{ p: 2, position: 'relative' }}>
-            {targetMuscleExercises.length !== 0 ? <HorizontalScrollbar data={targetMuscleExercises} /> : <Loader />}
-        </Stack>
-        <Typography sx={{ fontSize: { lg: '44px', xs: '25px' }, ml: '20px', mt: { lg: '100px', xs: '60px' } }} fontWeight={700} color="#FF2625" mb="33px">
-            Exercises <span style={{ color: '#FF2625', textTransform: 'capitalize' }}>That Use</span> The Same Equipment
-        </Typography>
-        <Stack direction="row" sx={{ p: 2, position: 'relative' }}>
-            {equipmentExercises.length !== 0 ? <HorizontalScrollbar data={equipmentExercises} /> : <Loader />}
-        </Stack>
-    </Box>
+  <Box sx={{ mt: { lg: "100px", xs: "0px" } }}>
+    <Typography
+      sx={{ fontSize: { lg: "44px", xs: "25px" }, ml: "20px" }}
+      fontWeight={700}
+      color="#FF2625"
+      mb="33px"
+    >
+      Exercises{" "}
+      <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+        That Target
+      </span>{" "}
+      The Same Muscle Group
+    </Typography>
+    <Stack direction="row" sx={{ p: 2, position: "relative" }}>
+      {targetMuscleExercises.length !== 0 ? (
+        <HorizontalScrollbar data={targetMuscleExercises} />
+      ) : (
+        <Loader />
+      )}
+    </Stack>
+    <Typography
+      sx={{
+        fontSize: { lg: "44px", xs: "25px" },
+        ml: "20px",
+        mt: { lg: "100px", xs: "60px" },
+      }}
+      fontWeight={700}
+      color="#FF2625"
+      mb="33px"
+    >
+      Exercises{" "}
+      <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
+        That Use
+      </span>{" "}
+      The Same Equipment
+    </Typography>
+    <Stack direction="row" sx={{ p: 2, position: "relative" }}>
+      {equipmentExercises.length !== 0 ? (
+        <HorizontalScrollbar data={equipmentExercises} />
+      ) : (
+        <Loader />
+      )}
+    </Stack>
+  </Box>
 );
 
 export default SimilarExercises;

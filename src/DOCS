@@ -1,0 +1,17 @@
+RapidAPI
+
+RapidAPI - https://rapidapi.com/hub?utm_source=y
+RapidAPI ExerciseDB - https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=referral&utm_campaign=DevRel
+
+API Overview
+A database API containing 1300+ exercises with body part, target muscle equipment necessary, and a form and follow-through animation.
+The ExerciseDB gives you access to over 1300 exercises with individual exercise data and animated demonstrations. Please visit https://v2.exercisedb.io/docs for full API documentation.
+
+RapidAPI YouTube Search - https://rapidapi.com/h0p3rwe/api/youtube-search-and-download?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=referral&utm_campaign=DevRel
+
+
+npx create-react-app ./ to initialize the project
+
+create an index.js file in the source folder. the application is connected to the DOM here
+
+2 pages in the app: Home and Exercise Details, which is rendered when you click on a specific exercise.

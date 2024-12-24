@@ -1,5 +1,5 @@
 {
   "editor.suggest.preview": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "off",
   "window.zoomLevel": 3
 }

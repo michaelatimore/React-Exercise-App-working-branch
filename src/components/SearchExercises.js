@@ -13,6 +13,14 @@ This modification uses the URLSearchParams class to handle the query parameters 
 This modification ensures that the query parameters are appended to the URL correctly. Note that the fetch function doesn't have a params property like Axios, so we need to manually append the parameters to the URL.
 */ 
 
+/**
+ * This component renders a search bar, a horizontal scrollbar with all the body parts, and handles the search functionality.
+ * It fetches the list of body parts from the exerciseDB API and renders them in the horizontal scrollbar.
+ * When the user types something in the search bar and clicks the search button, it fetches the exercises from the exerciseDB API
+ * that match the search query and renders them in the exercises component.
+ * It also handles the case when the user selects a body part from the horizontal scrollbar and renders the exercises for that
+ * body part in the exercises component.
+ */
   const SearchExercises = ({setExercises, bodyPart, setBodyPart}) => {
     const [search, setSearch] = useState('');
     
@@ -25,11 +33,17 @@ This modification ensures that the query parameters are appended to the URL corr
         setBodyParts(['all', ...bodyPartsData]);
       }
   
-      fetchExercisesData();     
-      
+      fetchExercisesData();  
 
     }, []);
   
+/**
+ * Asynchronously fetches exercises data and filters it based on the search query.
+ * 
+ * Fetches all exercises from the exerciseDB API and filters the exercises
+ * that include the search query in their name, target, equipment, or body part.
+ * Updates the exercises state with the filtered exercises and clears the search input.
+ */
     const handleSearch = async () => {
       if (search) {
         const exerciseData = await fetchData(

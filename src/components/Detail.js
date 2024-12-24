@@ -5,29 +5,35 @@ import BodyPartImage from '../assets/icons/body-part.png';
 import TargetImage from '../assets/icons/target.png';
 import EquipmentImage from '../assets/icons/equipment.png';
 
+/**
+ * Renders the detail view of an exercise.
+ *
+ * @param {Object} exerciseDetail - Object containing details of the exercise
+ * @return {JSX.Element} The JSX element representing the detail view
+ */
 const Detail = ({ exerciseDetail }) => {
-  const {bodyPart,
-    equipment,
-    gifUrl,    
-    name,
-    target,
-   } = exerciseDetail;
+  const {
+    bodyPart, // The body part that this exercise targets
+    equipment, // The equipment required to perform this exercise
+    gifUrl, // The URL of the exercise's GIF
+    name, // The name of the exercise
+    target, // The target muscle group of the exercise
+  } = exerciseDetail;
 
   const extraDetail = [
     {
-      icon: BodyPartImage,
-      name: bodyPart,
+      icon: BodyPartImage, // The icon representing the body part
+      name: bodyPart, // The name of the body part
     },
     {
-      icon: TargetImage,
-      name: target,
+      icon: TargetImage, // The icon representing the target muscle group
+      name: target, // The name of the target muscle group
     },
     {
-      icon: EquipmentImage,
-      name: equipment,
+      icon: EquipmentImage, // The icon representing the equipment required
+      name: equipment, // The name of the equipment required
     },
   ];
-
 
   return (
     <Stack gap="60px" sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
